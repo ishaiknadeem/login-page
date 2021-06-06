@@ -38,15 +38,6 @@ function Login(props) {
     return errors;
   }
 
-//   const [hasSubmitted, setHasSubmitted] = useState(false);
-
-//   function submissionHandler(values, { setSubmitting }) {
-//     setTimeout(() => {
-//       console.log(JSON.stringify(values, null, 2));
-//       setSubmitting(false);
-//       setHasSubmitted(true);
-//     }, 800);
-//   }
 
   const handleLogin = () => {
     setError(null);
@@ -92,13 +83,9 @@ function Login(props) {
                 type ="text"
                 {...username}
                 autoComplete="new-password"
-                // name="email"
                 labelText="Email"
                 placeholder="Enter an email address"
-                // value={values.email}
-                // invalidText={errors.email}
-                // invalid={Boolean(touched.email && errors.email)}
-                // disabled={hasSubmitted}
+                
               />
               <TextInput 
                 id="password"
@@ -110,27 +97,12 @@ function Login(props) {
                 name="password"
                 labelText="Password"
                 placeholder="Enter a password"
-                // value={values.password}
-                // invalidText={errors.password}
-                // invalid={Boolean(touched.password && errors.password)}
-                // disabled={hasSubmitted}
+              
                 
               />
               {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
             </div>
-            {/* {isSubmitting || hasSubmitted ? (
-              <InlineLoading
-                success={hasSubmitted}
-                icondescription="Active loading indicator"
-                description={
-                  hasSubmitted ? "Submission successful" : "Submitting data..."
-                }
-              />
-            ) : (
-              <Button type="submit" disabled={isSubmitting}>
-                Submit
-              </Button>
-            )} */}
+          
 
             <Button type="button" value={loading ? 'Loading...' : 'Login'} onClick={handleLogin} disabled={loading} >
                 Submit

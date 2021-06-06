@@ -1,5 +1,5 @@
 import React from 'react';
-import { getUser, removeUserSession } from './Utils/Common';
+import { getUser, removeUserSession } from '../Utils/Common';
 
 function Logout(props) {
   const user = getUser();
@@ -19,3 +19,7 @@ function Logout(props) {
 }
 
 export default Logout;
+
+
+// This is a extra funciton to log the user out
+// Just tried it to breashup my skills

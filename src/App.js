@@ -33,7 +33,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <div>
-         
             <Switch>
               <Route exact path="/" component={Login} />
               <PublicRoute path="/login" component={Login} />

@@ -1,8 +1,8 @@
 import React from 'react';
-import InpuComponent from './InpuComponent';
+import InpuComponent from './todo/InpuComponent';
 import {useState} from 'react';
 import uuid from 'react-uuid';
-import TodoListComponent from './TodoListComponent';
+import TodoListComponent from './todo/TodoListComponent';
 import { DataTable } from "carbon-components-react";
 const {
   TableContainer
