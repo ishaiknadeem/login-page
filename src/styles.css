@@ -1,0 +1,34 @@
+/*@import "carbon-components/scss/globals/scss/styles.scss";
+@import "@carbon/type/scss/classes";
+@import "@carbon/type/scss/styles";*/
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .bx--header-panel {
+    background-color: #1d3649 !important;
+  }
+  
+  .bx--select-input {
+    width: 100% !important;
+  }
+  
+  .bx--side-nav__navigation {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .bx--form-item {
+    padding-top: 10000px;
+    padding-bottom: 10px;
+  }
+  
+  .bx--header {
+    background-color: #1d3649 !important;
+  }
+  
+  .bx--text-input__field-wrapper {
+    width: 100%;
+  }
+  
