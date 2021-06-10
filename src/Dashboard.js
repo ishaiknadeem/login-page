@@ -3,7 +3,6 @@ import InpuComponent from './todo/InpuComponent';
 import {useState} from 'react';
 import uuid from 'react-uuid';
 import TodoListComponent from './todo/TodoListComponent';
-import { TableContainer } from "carbon-components-react";
 
 //local storage
 function useLocalStorageState(key, defaultValue = '') {
@@ -71,13 +70,11 @@ function Dashboard() {
           
         />
 
-        <TableContainer className="p-7  "
-        title="List of Records ">
+       
         <TodoListComponent
         todos={searchTerm.length < 1 ? todos : searchResults}
         deleteTodo={deleteTodo}
         />
-        </TableContainer> 
 
         
     </div>

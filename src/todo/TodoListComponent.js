@@ -10,14 +10,24 @@ import {
 
 function TodoListComponent(props) {
     return (
+
             <Table>  
+            <thead>
+              <tr>
+                <th>
+                  <span class="bx--table-header-label">List of Records</span>
+                </th>
+                </tr>
+            </thead>
                 {
                     props.todos.map((todo) => {
                         return (
-
-                            <TableBody>
-                                <TableRow>
-                                        <TableCell  key={todo.id} className={`flex justify-between items-center  mb-2 `} >
+                        <tbody>
+                            <tr>
+                            {/* <TableBody>
+                                <TableRow> */}
+                                <td  key={todo.id} className={`flex justify-between items-center  mb-2 `} >
+                                        {/* <TableCell  key={todo.id} className={`flex justify-between items-center  mb-2 `} > */}
                                             <span onClick={
                                                 (e) => {props.markDone(todo)} 
                                                 }
@@ -35,13 +45,13 @@ function TodoListComponent(props) {
                                                 </Button>
                                                 
                                             </div>
+                                        {/* </TableCell> */}
                                             
-                                        </TableCell>
-                                </TableRow>
-
-                            </TableBody>
-
-
+                                </td>
+                                {/* </TableRow> */}
+                                {/* </TableBody> */}
+                            </tr>
+                        </tbody>
                         );
                     })
 
@@ -49,6 +59,7 @@ function TodoListComponent(props) {
 
 
             </Table>  
+            
             
         );
 }
