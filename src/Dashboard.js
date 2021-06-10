@@ -3,11 +3,7 @@ import InpuComponent from './todo/InpuComponent';
 import {useState} from 'react';
 import uuid from 'react-uuid';
 import TodoListComponent from './todo/TodoListComponent';
-import { DataTable } from "carbon-components-react";
-const {
-  TableContainer
-} = DataTable;
-
+import { TableContainer } from "carbon-components-react";
 
 //local storage
 function useLocalStorageState(key, defaultValue = '') {
@@ -56,7 +52,7 @@ function Dashboard() {
 
   const handleChange = (e) =>{
     setInputValue(e.target.value);
-}
+  }
 
   const deleteTodo = (todo) => {
     setTodos(todos.filter((t) => t.id !== todo.id))
@@ -64,7 +60,7 @@ function Dashboard() {
 
   return (
 
-      <div className="p-12 h-full text-sm">
+    <div className="p-12 h-full text-sm">
 
         <InpuComponent
         value= {inputValue}
@@ -74,15 +70,15 @@ function Dashboard() {
         searchKeyword={searchHandler}
           
         />
-       <TableContainer className="p-7 "
-        title="List of Records ">
-         <TodoListComponent
-         todos={searchTerm.length < 1 ? todos : searchResults}
-         deleteTodo={deleteTodo}
-         />
-      </TableContainer>
 
-       
+        <TableContainer className="p-7  "
+        title="List of Records ">
+        <TodoListComponent
+        todos={searchTerm.length < 1 ? todos : searchResults}
+        deleteTodo={deleteTodo}
+        />
+        </TableContainer> 
+
         
     </div>
 

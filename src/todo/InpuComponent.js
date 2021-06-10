@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import {
+    Form,
     TextInput,
     Button,
   } from "carbon-components-react";
@@ -8,7 +9,7 @@ import {
     className: 'some-class',
     id: 'test2',
     labelText: 'Enter Your Record',
-    placeholder: 'Add task',
+    placeholder: 'Add Record',
   };
 
 // We can also use even.target.value instead of useRef 
@@ -19,7 +20,6 @@ function InpuComponent(props) {
 
 
     const getSearchTerm = () => {
-        // console.log(inputEl.current.value)
         props.searchKeyword(inputEl.current.value);
       };
 
@@ -27,30 +27,26 @@ function InpuComponent(props) {
     return ( 
         <>
         <div className="flex justify-between ml-7 mr-7">
-            <form className="flex  items-center mb-7 " onSubmit={props.handleSubmit}>
+            <Form className="flex  items-center mb-7 " onSubmit={props.handleSubmit}>
                 <div>
-                    <TextInput className="ui icon input"
+                    <TextInput 
                     type="text"
                     {...TextInputProps}
-
                     id="todoText"
-                    placeholder=" Add Records" 
-                    className=" bg-white py-1 px-2justify-end	" 
                     value={props.value} 
                     onChange={props.handleChange}></TextInput>
                 </div>
 
                 <Button className=" mt-4 "
-                 kind = "tertiary"
-                 type="submit"
-                 >
-                Add record
-              </Button>
-            </form>
+                  kind = "tertiary"
+                  type="submit"
+                  >
+                  Add record
+                </Button>
+            </Form>
 
 
             <div className=" mt-10">
-            <div className="ui icon input">
             <TextInput
                 ref={inputEl}
                 type="text"
@@ -58,9 +54,7 @@ function InpuComponent(props) {
                 className="prompt"
                 value={props.term}
                 onChange={getSearchTerm}>
-                </TextInput>
-            <i className="search icon"></i>
-            </div>
+            </TextInput>
             </div>
             
       </div>
