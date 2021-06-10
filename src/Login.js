@@ -80,7 +80,7 @@ function Login(props) {
                 {...username}
                 autoComplete="new-password"
                 labelText="Email"
-                placeholder="Enter an email address"
+                placeholder="Enter username"
                 
               />
               <TextInput 
